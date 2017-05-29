@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">My Hafidz Quran</string>
+    <string name="daftar_santri">Daftar Santri</string>
+    <string name="tambah">Tambah</string>
+    <string name="remove">Remove</string>
+    <string name="edit">Edit</string>
+    <string name="rekap">Rekap</string>
+    <string name="tanggal">Tanggal :</string>
+    <string name="data_hafalan">Data Hafalan</string>
+    <string name="juz">Juz :</string>
+    <string name="halaman">Halaman :</string>
+    <string name="nolnol">00</string>
+    <string name="kelancaran">Kelancaran :</string>
+    <string name="lancar">Lancar</string>
+    <string name="ulang">Ulang</string>
+    <string name="murojaah">Murojaah :</string>
+    <string name="selesai">Selesai</string>
+    <string name="keterangan">Keterangan :</string>
+    <string name="submit">Submit</string>
+    <string name="laporan_hafalan">Laporan Hafalan</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="usernya">Username</string>
+    <string name="passnya">Password</string>
+    <string name="BaseURL">http://192.168.1.103/vera/api/</string>
+</resources>
