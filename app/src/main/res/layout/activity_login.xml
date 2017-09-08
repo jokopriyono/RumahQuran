@@ -21,34 +21,65 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="56dp"
+        android:paddingTop="10dp"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         android:gravity="center"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="172dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="74dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher"/>
-        <EditText android:id="@+id/edt_username"
+            android:src="@drawable/v_logo"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_username"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+            <com.hafidzquran.rumahquran.ui.RuquEditText
+                android:id="@+id/edt_username"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/idnya"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_password"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+            <com.hafidzquran.rumahquran.ui.RuquEditText
+                android:id="@+id/edt_password"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/namanya"/>
+        </android.support.design.widget.TextInputLayout>
+        <Switch android:id="@+id/switch_admin"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="@string/usernya"/>
-        <EditText android:id="@+id/edt_password"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="@string/passnya"/>
-        <Button
+            android:hint="@string/mode_admin"/>
+        <com.hafidzquran.rumahquran.ui.RuquButton
             android:id="@+id/btn_login"
+            style="@style/button"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/login"
+            android:textAllCaps="false"/>
+        <com.hafidzquran.rumahquran.ui.RuquTextview
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/atau"/>
+        <com.hafidzquran.rumahquran.ui.RuquButton
+            android:id="@+id/btn_daftar"
+            style="@style/button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/daftar"
             android:textAllCaps="false"/>
     </LinearLayout>
 </ScrollView>

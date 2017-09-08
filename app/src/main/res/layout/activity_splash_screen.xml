@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#3e50b4">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/v_logo"/>
+        <!--<com.jrummyapps.android.widget.AnimatedSvgView
+            android:id="@+id/logoAnimasi"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:animatedSvgFillColors="@array/logo_colors"
+            app:animatedSvgGlyphStrings="@array/logo_animasi"
+            app:animatedSvgFillStart="1200"
+            app:animatedSvgFillTime="1000"
+            app:animatedSvgTraceTime="2000"
+            app:animatedSvgTraceTimePerGlyph="1000"
+            app:animatedSvgImageSizeX="335"
+            app:animatedSvgImageSizeY="500"/>-->
+</LinearLayout>

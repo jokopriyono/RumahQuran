@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hafidzquran.myhafidzquran">
+    package="com.hafidzquran.rumahquran">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.HomeActivity"/>
-        <activity android:name=".activities.TambahActivity" />
-        <activity android:name=".activities.UbahActivity" />
+        <activity android:name=".activities.SantriActivity" />
+        <activity android:name=".activities.TambahUbahHafalanActivity" />
+        <activity android:name=".activities.HafalanActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.MenuActivity" />
+        <activity android:name=".activities.TambahUbahSantriActivity" />
+        <activity android:name=".activities.DaftarActivity" />
         <activity android:name=".activities.RekapActivity" />
         <activity
-            android:name=".activities.LoginActivity"
+            android:name=".activities.SplashScreenActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +30,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.AdminActivity" />
+        <activity android:name=".activities.TambahUbahGuruActivity"/>
     </application>
 
 </manifest>

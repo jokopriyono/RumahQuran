@@ -2,5 +2,64 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#27ae60</color>
+    <color name="colorFont">#ffda44</color>
+    <string-array name="logo_colors">
+        <item>#ffda44</item>
+        <item>#663012</item>
+        <item>#663012</item>
+        <item>#ff4f19</item>
+        <item>#e3001e</item>
+        <item>#e6be8a</item>
+        <item>#ffebb7</item>
+        <item>#ffd788</item>
+        <item>#868491</item>
+        <item>#868491</item>
+        <item>#868491</item>
+        <item>#868491</item>
+        <item>#868491</item>
+        <item>#868491</item>
+        <item>#868491</item>
+        <item>#868491</item>
+        <item>#868491</item>
+        <item>#868491</item>
+        <item>#868491</item>
+        <item>#868491</item>
+        <item>#b4b6bc</item>
+        <item>#5d647f</item>
+        <item>#5d647f</item>
+        <item>#5d647f</item>
+        <item>#5d647f</item>
+        <item>#5d647f</item>
+        <item>#5d647f</item>
+        <item>#5d647f</item>
+        <item>#5d647f</item>
+        <item>#5d647f</item>
+        <item>#5d647f</item>
+        <item>#5d647f</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+    </string-array>
 </resources>

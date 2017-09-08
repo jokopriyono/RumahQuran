@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Hafidz Quran</string>
+    <string name="app_name">Rumah Quran</string>
     <string name="daftar_santri">Daftar Santri</string>
     <string name="tambah">Tambah</string>
     <string name="remove">Remove</string>
@@ -19,7 +19,36 @@
     <string name="submit">Submit</string>
     <string name="laporan_hafalan">Laporan Hafalan</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="usernya">Username</string>
-    <string name="passnya">Password</string>
-    <string name="BaseURL">http://192.168.1.103/vera/api/</string>
+    <string name="idnya">Username</string>
+    <string name="namanya">Password</string>
+
+    <!--<string name="BaseURL">http://rumahquran.esq-stech.id/api/</string>-->
+    <!--<string name="URL_web">http://rumahquran.esq-stech.id/api/</string>-->
+    <!--<string name="Localhost_url">http://192.168.1.101/vera/api/</string>-->
+
+    <string name="BaseURL">http://rumahquran.esq-stech.id/api/</string>
+
+    <string name="refresh">Refresh</string>
+    <string name="santri">Santri</string>
+    <string name="hafalan">Hafalan</string>
+    <string name="nama_santri">Nama Santri :</string>
+    <string name="tahun_ajar">Tahun Ajar :</string>
+    <string name="simpan">Simpan</string>
+    <string name="log_out">Log Out</string>
+    <string name="login">Login</string>
+    <string name="atau">Atau</string>
+    <string name="daftar">Daftar</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="konfirmasi_password">Konfirmasi Password</string>
+    <string name="email">Email</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="kodeaplikasi">rumah_quran_berkah</string>
+    <string name="retrofit_failure">Tidak dapat tersambung ke server, cek koneksi internet anda</string>
+    <string name="retrofit_body_null">Terdapat masalah pada respon balik dari server</string>
+    <string name="cek_koneksi">Cek koneksi internet anda lalu coba kembali</string>
+    <string name="mode_admin">Mode Admin</string>
+    <string name="daftar_guru">Daftar Guru</string>
+    <string name="dari_tanggal">Dari Tanggal :</string>
+    <string name="sampai_tanggal">Sampai Tanggal :</string>
 </resources>
