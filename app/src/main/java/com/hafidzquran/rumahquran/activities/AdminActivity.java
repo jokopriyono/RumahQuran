@@ -13,22 +13,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hafidzquran.rumahquran.R;
 import com.hafidzquran.rumahquran.SessionManager;
 import com.hafidzquran.rumahquran.apirequests.GetDataGuruBody;
-import com.hafidzquran.rumahquran.apirequests.GetDataSantriBody;
 import com.hafidzquran.rumahquran.apirequests.HapusGuruBody;
 import com.hafidzquran.rumahquran.apiresults.GetDataGuruResult;
-import com.hafidzquran.rumahquran.apiresults.GetDataSantriResult;
 import com.hafidzquran.rumahquran.apiresults.HapusGuruResult;
 import com.hafidzquran.rumahquran.apiservices.GetDataGuruService;
-import com.hafidzquran.rumahquran.apiservices.GetDataSantriService;
 import com.hafidzquran.rumahquran.apiservices.HapusGuruService;
 import com.hafidzquran.rumahquran.ui.RuquButton;
 import com.hafidzquran.rumahquran.ui.RuquTextview;
@@ -38,9 +33,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-import static android.view.View.GONE;
-
 
 public class AdminActivity extends AppCompatActivity implements View.OnClickListener {
     private SessionManager sesi;
@@ -149,7 +141,7 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
         TableRow.LayoutParams hlp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
         header.setLayoutParams(hlp);
         RuquTextview headSantri = new RuquTextview(AdminActivity.this);
-        headSantri.setText("Nama Guru");
+        headSantri.setText(R.string.nama_guru);
         headSantri.setLayoutParams(new TableRow.LayoutParams(250, ViewGroup.LayoutParams.WRAP_CONTENT));
         headSantri.setTextSize(15);
         headSantri.setTextColor(Color.BLACK);
@@ -157,13 +149,13 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
         headSantri.setPadding(25, 0, 25, 3);
         header.addView(headSantri);
         RuquTextview headEmail = new RuquTextview(AdminActivity.this);
-        headEmail.setText("Email");
+        headEmail.setText(R.string.email);
         headEmail.setTypeface(headEmail.getTypeface(), Typeface.BOLD);
         headEmail.setTextSize(15);
         headEmail.setTextColor(Color.BLACK);
         header.addView(headEmail);
         RuquTextview headUsername = new RuquTextview(AdminActivity.this);
-        headUsername.setText("Username");
+        headUsername.setText(R.string.username);
         headUsername.setTypeface(headEmail.getTypeface(), Typeface.BOLD);
         headUsername.setTextSize(15);
         headUsername.setTextColor(Color.BLACK);
@@ -274,7 +266,10 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
 
     public boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        NetworkInfo netInfo = null;
+        if (cm != null) {
+            netInfo = cm.getActiveNetworkInfo();
+        }
         return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

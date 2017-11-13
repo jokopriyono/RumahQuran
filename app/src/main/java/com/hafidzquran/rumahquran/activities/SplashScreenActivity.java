@@ -6,11 +6,10 @@ import android.os.Handler;
 import android.os.Bundle;
 
 import com.hafidzquran.rumahquran.R;
-import com.jrummyapps.android.widget.AnimatedSvgView;
 
 public class SplashScreenActivity extends Activity {
-    private static int SplashTime = 3000;
-    private AnimatedSvgView animatedSvgView;
+    protected static int SplashTime = 3000;
+//    private AnimatedSvgView animatedSvgView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

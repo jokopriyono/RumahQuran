@@ -5,6 +5,7 @@
     <string name="remove">Remove</string>
     <string name="edit">Edit</string>
     <string name="rekap">Rekap</string>
+    <string name="tgl">Tanggal</string>
     <string name="tanggal">Tanggal :</string>
     <string name="data_hafalan">Data Hafalan</string>
     <string name="juz">Juz :</string>
@@ -38,10 +39,8 @@
     <string name="login">Login</string>
     <string name="atau">Atau</string>
     <string name="daftar">Daftar</string>
-    <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="konfirmasi_password">Konfirmasi Password</string>
-    <string name="email">Email</string>
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="kodeaplikasi">rumah_quran_berkah</string>
     <string name="retrofit_failure">Tidak dapat tersambung ke server, cek koneksi internet anda</string>
@@ -51,4 +50,14 @@
     <string name="daftar_guru">Daftar Guru</string>
     <string name="dari_tanggal">Dari Tanggal :</string>
     <string name="sampai_tanggal">Sampai Tanggal :</string>
+    <string name="nama_guru">Nama Guru</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="detil">Detil</string>
+    <string name="nama_santri2">Nama Santri</string>
+    <string name="tahun_ajar2">Tahun Ajar</string>
+    <string name="minus">-</string>
+    <string name="pilih_santri">Pilih Santri</string>
+    <string name="bersihkan">Bersihkan</string>
+    <string name="cari">Cari</string>
 </resources>

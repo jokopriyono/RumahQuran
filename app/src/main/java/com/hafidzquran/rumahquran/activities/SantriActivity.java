@@ -13,11 +13,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hafidzquran.rumahquran.R;
@@ -105,7 +102,7 @@ public class SantriActivity extends AppCompatActivity implements View.OnClickLis
         TableRow.LayoutParams hlp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
         header.setLayoutParams(hlp);
         RuquTextview headSantri = new RuquTextview(SantriActivity.this);
-        headSantri.setText("Nama Santri");
+        headSantri.setText(R.string.nama_santri2);
         //headSantri.setLayoutParams(new TableRow.LayoutParams(250, ViewGroup.LayoutParams.WRAP_CONTENT));
         headSantri.setTextSize(15);
         headSantri.setTextColor(Color.BLACK);
@@ -113,7 +110,7 @@ public class SantriActivity extends AppCompatActivity implements View.OnClickLis
         headSantri.setPadding(25, 0, 25, 3);
         header.addView(headSantri);
         RuquTextview headTahun = new RuquTextview(SantriActivity.this);
-        headTahun.setText("Tahun Ajar");
+        headTahun.setText(R.string.tahun_ajar2);
         headTahun.setTypeface(headTahun.getTypeface(), Typeface.BOLD);
         headTahun.setTextSize(15);
         headTahun.setTextColor(Color.BLACK);
@@ -231,7 +228,10 @@ public class SantriActivity extends AppCompatActivity implements View.OnClickLis
 
     public boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        NetworkInfo netInfo = null;
+        if (cm != null) {
+            netInfo = cm.getActiveNetworkInfo();
+        }
         return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 

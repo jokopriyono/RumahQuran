@@ -16,13 +16,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hafidzquran.rumahquran.R;
@@ -129,7 +126,7 @@ public class HafalanActivity extends AppCompatActivity implements View.OnClickLi
         TableRow.LayoutParams hlp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
         header.setLayoutParams(hlp);
         RuquTextview headSantri = new RuquTextview(HafalanActivity.this);
-        headSantri.setText("Tanggal");
+        headSantri.setText(R.string.tgl);
         headSantri.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT, 0.25f));
         headSantri.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -140,7 +137,7 @@ public class HafalanActivity extends AppCompatActivity implements View.OnClickLi
         headSantri.setPadding(25, 0, 25, 3);
         header.addView(headSantri);
         RuquTextview headTahun = new RuquTextview(HafalanActivity.this);
-        headTahun.setText("Detail");
+        headTahun.setText(R.string.detil);
         headTahun.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT, 1));
         headTahun.setTypeface(headTahun.getTypeface(), Typeface.BOLD);
@@ -171,22 +168,30 @@ public class HafalanActivity extends AppCompatActivity implements View.OnClickLi
                 linear.setOrientation(LinearLayout.VERTICAL);
 
                 final RuquTextview juz = new RuquTextview(HafalanActivity.this);
-                juz.setText("Juz : "+ result.getDATA().get(i).getJUZ());
+                String showContent ;
+                showContent = "Juz : "+ result.getDATA().get(i).getJUZ();
+                juz.setText(showContent);
                 linear.addView(juz);
                 final RuquTextview halaman = new RuquTextview(HafalanActivity.this);
-                halaman.setText("Halaman : " + result.getDATA().get(i).getHALAMAN());
+                showContent = "Halaman : " + result.getDATA().get(i).getHALAMAN();
+                halaman.setText(showContent);
                 linear.addView(halaman);
                 final RuquTextview kelancaran = new RuquTextview(HafalanActivity.this);
-                kelancaran.setText("Kelancaran : " + result.getDATA().get(i).getKELANCARAN());
+                showContent = "Kelancaran : " + result.getDATA().get(i).getKELANCARAN();
+                kelancaran.setText(showContent);
                 linear.addView(kelancaran);
                 final RuquTextview murojaah = new RuquTextview(HafalanActivity.this);
-                if (result.getDATA().get(i).getMUROJAAH().equals("0"))
-                    murojaah.setText("Murojaah : Tidak Selesai");
-                else
-                    murojaah.setText("Murojaah : Selesai");
+                if (result.getDATA().get(i).getMUROJAAH().equals("0")) {
+                    showContent = "Murojaah : Tidak Selesai";
+                    murojaah.setText(showContent);
+                } else {
+                    showContent = "Murojaah : Tidak Selesai";
+                    murojaah.setText(showContent);
+                }
                 linear.addView(murojaah);
                 final RuquTextview santri = new RuquTextview(HafalanActivity.this);
-                santri.setText("Santri : " + result.getDATA().get(i).getSANTRI());
+                showContent = "Santri : " + result.getDATA().get(i).getSANTRI();
+                santri.setText(showContent);
                 linear.addView(santri);
 
                 row.addView(linear);
@@ -324,7 +329,10 @@ public class HafalanActivity extends AppCompatActivity implements View.OnClickLi
 
     public boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        NetworkInfo netInfo = null;
+        if (cm != null) {
+            netInfo = cm.getActiveNetworkInfo();
+        }
         return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

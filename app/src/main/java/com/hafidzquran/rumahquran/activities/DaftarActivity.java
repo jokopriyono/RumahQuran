@@ -4,8 +4,6 @@ import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.hafidzquran.rumahquran.R;
@@ -96,9 +94,7 @@ public class DaftarActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_daftar:
-                if (getIntent().getStringExtra("nama") != null){
-
-                } else if (edtUser.getText().toString().equals("") ||
+                if (edtUser.getText().toString().equals("") ||
                         edtPass.getText().toString().equals("") ||
                         edtConfirmPass.getText().toString().equals("") ||
                         edtNamaLengkap.getText().toString().equals("") ||

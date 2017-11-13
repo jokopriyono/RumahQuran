@@ -1,12 +1,7 @@
 package com.hafidzquran.rumahquran.ui;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.util.AttributeSet;
-
-/**
- * Created by LENOVO on 09/08/2017.
- */
 
 public class RuquButton extends android.support.v7.widget.AppCompatButton {
 

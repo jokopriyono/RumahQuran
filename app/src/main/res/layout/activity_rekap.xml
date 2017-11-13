@@ -50,7 +50,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
         <com.hafidzquran.rumahquran.ui.RuquTextview
-            android:text="Pilih Santri"
+            android:text="@string/pilih_santri"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Spinner
@@ -63,21 +63,21 @@
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:gravity="right"
+        android:gravity="end"
         android:orientation="horizontal">
         <com.hafidzquran.rumahquran.ui.RuquButton
             android:id="@+id/btn_bersihkan"
             style="@style/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bersihkan"
+            android:text="@string/bersihkan"
             android:textAllCaps="false"/>
         <com.hafidzquran.rumahquran.ui.RuquButton
             android:id="@+id/btn_cari"
             style="@style/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cari"
+            android:text="@string/cari"
             android:textAllCaps="false"/>
     </LinearLayout>
     <ScrollView

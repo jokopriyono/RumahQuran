@@ -4,10 +4,6 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 
-/**
- * Created by Joko Priyono on 23/10/2016.
- */
-
 public class RuquTextview extends android.support.v7.widget.AppCompatTextView {
 
     public RuquTextview(Context context) {

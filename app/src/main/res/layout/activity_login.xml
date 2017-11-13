@@ -32,7 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/v_logo"/>
+            android:src="@drawable/v_logo"
+            android:contentDescription="@string/minus" />
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_username"
             android:layout_width="200dp"

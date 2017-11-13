@@ -7,3 +7,10 @@
 /build
 /captures
 .externalNativeBuild
+.idea/vcs.xml
+app/libs/
+app/src/main/res/mipmap-hdpi/logo_icon.png
+app/src/main/res/mipmap-mdpi/logo_icon.png
+app/src/main/res/mipmap-xhdpi/logo_icon.png
+app/src/main/res/mipmap-xxhdpi/logo_icon.png
+app/src/main/res/mipmap-xxxhdpi/logo_icon.png

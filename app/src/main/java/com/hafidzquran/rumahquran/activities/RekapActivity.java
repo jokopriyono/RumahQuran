@@ -13,14 +13,11 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hafidzquran.rumahquran.R;
@@ -137,7 +134,10 @@ public class RekapActivity extends AppCompatActivity implements View.OnClickList
 
     public boolean isOnline() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        NetworkInfo netInfo = null;
+        if (cm != null) {
+            netInfo = cm.getActiveNetworkInfo();
+        }
         return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
@@ -244,8 +244,11 @@ public class RekapActivity extends AppCompatActivity implements View.OnClickList
                                 totalUlang = totalUlang + 1;
                             }
                         }
-                        txtLancar.setText("Lancar : "+totalLancar);
-                        txtUlang.setText("Ulang : "+totalUlang);
+                        String showContent;
+                        showContent = "Lancar : "+totalLancar;
+                        txtLancar.setText(showContent);
+                        showContent = "Ulang : "+totalUlang;
+                        txtUlang.setText(showContent);
                         totalLancar = 0;
                         totalUlang = 0;
                         drawTable(tableRekap, response.body());
@@ -270,7 +273,7 @@ public class RekapActivity extends AppCompatActivity implements View.OnClickList
         TableRow.LayoutParams hlp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
         header.setLayoutParams(hlp);
         RuquTextview headTanggal = new RuquTextview(RekapActivity.this);
-        headTanggal.setText("Tanggal");
+        headTanggal.setText(R.string.tgl);
         headTanggal.setGravity(Gravity.CENTER_HORIZONTAL);
         //headSantri.setLayoutParams(new TableRow.LayoutParams(250, ViewGroup.LayoutParams.WRAP_CONTENT));
         headTanggal.setTextSize(15);
@@ -279,7 +282,7 @@ public class RekapActivity extends AppCompatActivity implements View.OnClickList
         headTanggal.setPadding(25, 0, 25, 3);
         header.addView(headTanggal);
         RuquTextview headDetail = new RuquTextview(RekapActivity.this);
-        headDetail.setText("Detail");
+        headDetail.setText(R.string.detil);
         headDetail.setTypeface(headDetail.getTypeface(), Typeface.BOLD);
         headDetail.setTextSize(15);
         headDetail.setTextColor(Color.BLACK);
@@ -308,27 +311,35 @@ public class RekapActivity extends AppCompatActivity implements View.OnClickList
                 //        ViewGroup.LayoutParams.WRAP_CONTENT, 1));
                 linear.setOrientation(LinearLayout.VERTICAL);
 
+                String showContent;
+                showContent = "Juz : "+ result.getDATA().get(i).getJUZ();
                 final RuquTextview juz = new RuquTextview(RekapActivity.this);
-                juz.setText("Juz : "+ result.getDATA().get(i).getJUZ());
+                juz.setText(showContent);
                 juz.setTextColor(Color.BLACK);
                 linear.addView(juz);
                 final RuquTextview halaman = new RuquTextview(RekapActivity.this);
-                halaman.setText("Halaman : " + result.getDATA().get(i).getHALAMAN());
+                showContent = "Halaman : " + result.getDATA().get(i).getHALAMAN();
+                halaman.setText(showContent);
                 halaman.setTextColor(Color.BLACK);
                 linear.addView(halaman);
                 final RuquTextview kelancaran = new RuquTextview(RekapActivity.this);
-                kelancaran.setText("Kelancaran : " + result.getDATA().get(i).getKELANCARAN());
+                showContent = "Kelancaran : " + result.getDATA().get(i).getKELANCARAN();
+                kelancaran.setText(showContent);
                 kelancaran.setTextColor(Color.BLACK);
                 linear.addView(kelancaran);
                 final RuquTextview murojaah = new RuquTextview(RekapActivity.this);
-                if (result.getDATA().get(i).getMUROJAAH().equals("0"))
-                    murojaah.setText("Murojaah : Tidak Selesai");
-                else
-                    murojaah.setText("Murojaah : Selesai");
+                if (result.getDATA().get(i).getMUROJAAH().equals("0")) {
+                    showContent = "Murojaah : Tidak Selesai";
+                    murojaah.setText(showContent);
+                } else {
+                    showContent = "Murojaah : Selesai";
+                    murojaah.setText(showContent);
+                }
                 murojaah.setTextColor(Color.BLACK);
                 linear.addView(murojaah);
                 final RuquTextview santri = new RuquTextview(RekapActivity.this);
-                santri.setText("Santri : " + result.getDATA().get(i).getSANTRI());
+                showContent = "Santri : " + result.getDATA().get(i).getSANTRI();
+                santri.setText(showContent);
                 santri.setTextColor(Color.BLACK);
                 linear.addView(santri);
 

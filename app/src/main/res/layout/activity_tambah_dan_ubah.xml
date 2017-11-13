@@ -54,24 +54,23 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:gravity="center"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal"
+        android:baselineAligned="false">
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
-
             <com.hafidzquran.rumahquran.ui.RuquTextview
                 android:layout_weight="1"
-                android:gravity="right"
+                android:gravity="end"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:text="@string/juz"
                 android:textColor="@android:color/black" />
-
             <Spinner
                 android:id="@+id/spin_juz"
                 android:layout_width="wrap_content"
@@ -83,15 +82,17 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <com.hafidzquran.rumahquran.ui.RuquTextview
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:gravity="right"
+                android:gravity="end"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:text="@string/halaman"
                 android:textColor="@android:color/black" />
 
@@ -112,7 +113,8 @@
             android:layout_height="wrap_content"
             android:text="@string/kelancaran"
             android:textColor="@android:color/black"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"/>
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -140,7 +142,8 @@
             android:layout_height="wrap_content"
             android:text="@string/murojaah"
             android:textColor="@android:color/black"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"/>
         <CheckBox
             android:id="@+id/checkbox_murojaah"
             android:layout_width="wrap_content"
@@ -168,7 +171,7 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="center_vertical|right|bottom"
+        android:gravity="center_vertical|end|bottom"
         android:padding="10dp">
         <com.hafidzquran.rumahquran.ui.RuquButton
             android:id="@+id/btn_simpan"
